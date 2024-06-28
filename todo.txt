@@ -1,0 +1,4 @@
+- configure hyprlock [+]
+- waybar: volume module [+]
+- wallpaper UI client
+- theming: wallpaper color picker
