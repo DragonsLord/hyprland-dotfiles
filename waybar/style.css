@@ -1,4 +1,20 @@
-/* based on: https://github.com/JaKooLit */
+@import "../../.themes/wallust/colors.css";
+
+@define-color text @color5;
+@define-color highlight @color1;
+@define-color highlight-bg @color8;
+@define-color unselected @color3;
+@define-color border @color2;
+/*@define-color active @color1;*/
+/*@define-color muted @color8;*/
+@define-color bg @background;  /* background color */
+@define-color fg @foreground;  /* foreground color */
+
+/*@define-color contrast1 @color1;*/
+/*@define-color contrast2 @color4;*/
+
+/*default styles*/
+
 * {
 	font-family: "JetBrainsMono Nerd Font";
 	font-weight: bold;
@@ -10,98 +26,58 @@
 	padding: 0;
 }
 
-@import "./themes/catppuccin/frappe.css";
+/*bar styles*/
 
 window#waybar {
-  	transition-property: background-color;
-  	transition-duration: 0.5s;
-	background: alpha(@base, 0.6);
+    background: transparent;
+	background-image: linear-gradient(to bottom, @bg, transparent);
 }
 
-window#waybar.hidden {
-  	opacity: 0.2;
+/*default modules styles*/
+
+.modules-left .module, .modules-right .module {
+    background: alpha(@bg, 0.8);
+    border-radius: 0px 0px 10px 10px;
+    margin: 0px 1px;
+    color: @text;
+    padding: 1px 5px 3px 5px;
+    border: solid @border;
+    border-width: 0px 1px 1px 1px
 }
 
-window#waybar.empty,
-window#waybar.empty #window {
-    background-color: transparent;
-    padding: 0px;
-    border: 0px;
+.modules-center {
+    background: transparent;
 }
 
-#worksapces {
-    margin: 0;
-    padding: 0;
-}
+/*module specific styles*/
+
 #workspaces button {
-    color: @overlay1;
+    color: @unselected;
     box-shadow: none;
     text-shadow: none;
-    padding: 0px;
-    margin: 0px;
     border-radius: 3px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button:hover {
-    border-radius: 4px;
-    color: @peach;
-    background-color: @surface0;
+    color: @highlight;
+    border: solid 1px @highlight;
+    background: transparent;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-}
-
-#workspaces button.persistent {
-	color: @surface1;
 }
 
 #workspaces button.active {
-    color: @yellow;
-    border: solid 1px @surface2;
+    color: @highlight;
+    background-color: alpha(@highlight-bg, 0.3); 
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
-#workspaces button.urgent {
-	color: @red;
- 	border-radius: 0px;
-}
-
-/* This section can be use if you want to separate waybar modules */
-.modules-left, .modules-center, .modules-right {
-	background: @base; 
-	border: 0;
-	margin: 1px 3px;
-	padding: 0;
-	border-radius: 5px;
-} 
-
-.modules-center {
-    background: transparent;
-}
-
-#wireplumber {
-    color: @yellow;
-    padding: 5px;
-}
-
-#language {
-    color: @blue;
-    border-radius: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-
-#idle_inhibitor,
-#bluetooth,
-#backlight {
-  color: @blue;
-}
-
-#battery {
-  color: @green;
+#window {
+    text-shadow: -1px 0 @bg, 0 1px @bg, 1px 0 @bg, 0 -1px @bg; /* text outline */
+    color: @fg; 
 }
 
 @keyframes blink {
@@ -111,115 +87,12 @@ window#waybar.empty #window {
 }
 
 #battery.critical:not(.charging) {
-  background-color: @red;
-  color: @theme_text_color;
+  background-color: @bg;
+  color: @highlight;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   box-shadow: inset 0 -3px transparent;
-}
-
-#clock {
-  color: @yellow;
-}
-
-#cpu {
-  color: @green;
-}
-
-#custom-keyboard,
-#memory {
-  color: @sky;
-}
-
-#disk {
-  color: @sapphire;
-}
-
-#temperature {
-  color: @teal;
-}
-
-#temperature.critical {
-  background-color: @red;
-}
-
-#tray > .passive {
-  -gtk-icon-effect: dim;
-}
-#tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-}
-
-#keyboard-state {
-  color: @flamingo;
-}
-
-#pulseaudio {
-  color: @sapphire;
-}
-
-#pulseaudio.bluetooth {
-  color: @pink;
-}
-#pulseaudio.muted {
-  color: @red;
-}
-
-#window {
-  color: @mauve;
-}
-
-#mpris {
-  color:@lavender;
-}
-
-#network {
-  color: @teal;
-}
-#network.disconnected,
-#network.disabled {
-  background-color: @surface0;
-  color: @text;
-}
-#pulseaudio-slider slider {
-	min-width: 0px;
-	min-height: 0px;
-	opacity: 0;
-	background-image: none;
-	border: none;
-	box-shadow: none;
-}
-
-#pulseaudio-slider trough {
-	min-width: 80px;
-	min-height: 5px;
-	border-radius: 5px;
-}
-
-#pulseaudio-slider highlight {
-	min-height: 10px;
-	border-radius: 5px;
-}
-
-#backlight-slider slider {
-	min-width: 0px;
-	min-height: 0px;
-	opacity: 0;
-	background-image: none;
-	border: none;
-	box-shadow: none;
-}
-
-#backlight-slider trough {
-	min-width: 80px;
-	min-height: 10px;
-	border-radius: 5px;
-}
-
-#backlight-slider highlight {
-	min-width: 10px;
-	border-radius: 5px;
 }

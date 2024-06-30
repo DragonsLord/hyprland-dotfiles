@@ -81,7 +81,7 @@ palette = "dark"
 [templates]
 theme.new_engine = true
 theme.template = "templates/theme.css"
-theme.target = "~/.themes/wallpaper_colors.css"
+theme.target = "~/.themes/wallust/colors.css"
 # template: A relative path that points to a file where wallust.toml is located, usually at `~/.config/wallust/`
 # target: Absolute path in which to place a file with generated templated values
 # NOTE: prefer '' over "" for paths, avoids escaping.

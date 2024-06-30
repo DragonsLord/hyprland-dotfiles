@@ -2,3 +2,9 @@
 - waybar: volume module [+]
 - wallpaper UI client
 - theming: wallpaper color picker
+    waybar [+]
+- thunar config
+    wallpaper change script
+
+apps:
+ text editor
