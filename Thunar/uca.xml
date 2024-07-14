@@ -5,11 +5,22 @@
 	<name>Open Terminal Here</name>
 	<submenu></submenu>
 	<unique-id>1719337471384575-1</unique-id>
-	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<command>kitty --hold %f</command>
 	<description>Example for a custom action</description>
 	<range></range>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<directories/>
+</action>
+<action>
+	<icon>computer</icon>
+	<name>Set Screen Wallpaper</name>
+	<submenu>Desktop</submenu>
+	<unique-id>1720960214068997-1</unique-id>
+	<command>sh $HOME/.config/scripts/wallpaper.sh --set %f --no-ctl</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
 </action>
 </actions>
