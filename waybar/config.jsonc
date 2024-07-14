@@ -41,7 +41,8 @@
         "icon-size": 16
     },
     "hyprland/language": {
-        "format": "⌨  {}"
+        "format": "⌨  {}",
+        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
     },
     "network": {
         "tooltip": true,
