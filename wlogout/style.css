@@ -1,7 +1,7 @@
 @import "../../.themes/wallust/colors.css";
 
-@define-color text @color5;
-@define-color highlight @color1;
+@define-color text @foreground;
+@define-color highlight @color2;
 @define-color border @color2;
 @define-color bg @background;
 
