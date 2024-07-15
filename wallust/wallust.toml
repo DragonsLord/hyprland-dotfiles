@@ -82,6 +82,30 @@ palette = "dark"
 theme.new_engine = true
 theme.template = "templates/theme.css"
 theme.target = "~/.themes/wallust/colors.css"
+
+icon_hibernate.new_engine = true
+icon_hibernate.template = "templates/icons/hibernate.svg"
+icon_hibernate.target = "~/.themes/wallust/icons/hibernate.svg"
+
+icon_lock.new_engine = true
+icon_lock.template = "templates/icons/lock.svg"
+icon_lock.target = "~/.themes/wallust/icons/lock.svg"
+
+icon_logout.new_engine = true
+icon_logout.template = "templates/icons/logout.svg"
+icon_logout.target = "~/.themes/wallust/icons/logout.svg"
+
+icon_reboot.new_engine = true
+icon_reboot.template = "templates/icons/reboot.svg"
+icon_reboot.target = "~/.themes/wallust/icons/reboot.svg"
+
+icon_shutdown.new_engine = true
+icon_shutdown.template = "templates/icons/shutdown.svg"
+icon_shutdown.target = "~/.themes/wallust/icons/shutdown.svg"
+
+icon_suspend.new_engine = true
+icon_suspend.template = "templates/icons/suspend.svg"
+icon_suspend.target = "~/.themes/wallust/icons/suspend.svg"
 # template: A relative path that points to a file where wallust.toml is located, usually at `~/.config/wallust/`
 # target: Absolute path in which to place a file with generated templated values
 # NOTE: prefer '' over "" for paths, avoids escaping.
