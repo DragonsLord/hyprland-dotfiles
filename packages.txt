@@ -3,7 +3,7 @@ neovim
 sddm
 hypraland
 kitty
-dunst
+swaync
 xdg-desktop-porta
 qt5ct
 qt6ct
@@ -18,3 +18,20 @@ hyprlock
 lazygit
 asusctl supergfxctl asus
 ImageMagic
+
+======= git-credential-manager ====
+https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/install.md
+
+sudo dnf install dotnet-sdk-8.0
+Also dotnet 7 runtime might be still required. If so should be installed manually
+
+dotnet tool install -g git-credential-manager
+git-credential-manager configure
+
+credential store setup:
+https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md#gpgpass-compatible-files
+sudo dnf install pass
+=== generate key with: gpg --generate-key && pass init <gpg-key-uid>
+git config --global credential.credentialStore gpg
+Set Env Variable:
+export GPG_TTY=$(tty)

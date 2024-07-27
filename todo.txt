@@ -1,10 +1,16 @@
 - configure hyprlock [+]
 - waybar: volume module [+]
-- wallpaper UI client
+- wallpaper UI client [-]
 - theming: wallpaper color picker
     waybar [+]
-- thunar config
+- thunar config [+]
     wallpaper change script
+
+- swaync config & styling
+- volume, brightness scripts
+
+- waybar: try add music widget
 
 apps:
  text editor
+ image viewer/editor?
