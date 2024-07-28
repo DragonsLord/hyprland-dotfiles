@@ -1,0 +1,209 @@
+@import "../../.themes/wallust/colors.css";
+
+@define-color text @color5;
+@define-color active @color2;
+@define-color highlight @color1;
+@define-color highlight-bg @color8;
+@define-color unselected @color3;
+@define-color muted @color3;
+@define-color border @color3;
+@define-color bg @background;  /* background color */
+@define-color fg @foreground;  /* foreground color */
+
+* {
+    font-family: "HackNerdFontMono";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.control-center {
+    background: alpha(@bg, 0.9);
+    border: 1px solid @border;
+    color: @muted;
+    border-radius: 6px;
+    margin: 3px 0px;
+}
+
+.widget-label label {
+    font-size: 18px;
+    color: @muted;
+    padding: 0px 130px;
+}
+
+.widget-dnd {
+    background: alpha(@highlight-bg, 0.2);
+    padding: 1px 10px;
+    margin: 0px 10px;
+    border-radius: 5px;
+    color: @fg;
+}
+
+.widget-dnd switch {
+    margin: 5px 0px;
+    border-radius: 15px;
+    border: 1px solid @border;
+    background: @muted;
+}
+
+.widget-dnd switch:hover {
+    border: 1px solid @fg;
+}
+
+.widget-dnd switch:checked {
+    background: @active;
+}
+
+.widget-dnd switch slider {
+    background: @fg;
+}
+
+.widget-mpris {
+    color: @fg;
+    padding: 0px;
+    margin: 2px 0px;
+}
+
+.widget-mpris-title {
+    color: @fg;
+    text-shadow: -2px 0 @bg, 0 2px @bg, 2px 0 @bg, 0 -2px @bg;
+    font-size: 18px
+}
+
+.widget-mpris-subtitle {
+    color: @muted;
+    font-size: 12px
+}
+
+.widget-mpris button {
+    color: @fg;
+    border: none;
+    border-radius: 5px;
+    -gtk-icon-shadow: -2px 0 @bg, 0 2px @bg, 2px 0 @bg, 0 -2px @bg;
+}
+
+.widget-mpris button:hover {
+    color: @fg;
+    background: alpha(@bg, 0.6);
+    box-shadow: none;
+}
+
+.widget-mpris button:disabled {
+    color: alpha(@muted, 0.4);
+    border: none;
+    -gtk-icon-shadow: none;
+}
+
+button {
+    box-shadow: none;
+    color: @fg;
+    border: none;
+    border-radius: 5px;
+    -gtk-icon-shadow: -2px 0 @bg, 0 2px @bg, 2px 0 @bg, 0 -2px @bg;
+}
+
+button:hover {
+    color: @fg;
+    background: alpha(@bg, 0.6);
+    box-shadow: none;
+}
+
+button:disabled {
+    color: alpha(@muted, 0.4);
+    border: none;
+    -gtk-icon-shadow: none;
+}
+
+.widget-volume button {
+    padding: 0 5px;
+}
+
+.widget-backlight,
+.widget-volume {
+    color: @fg;
+    font-size: 24px;
+    background: alpha(@highlight-bg, 0.2);
+    margin: 0px 10px;
+    padding: 3px 5px;
+}
+
+.widget-volume {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.widget-backlight {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.widget-backlight label,
+.widget-volume label {
+    color: @fg;
+    font-size: 28px;
+    padding: 0px 3px;
+}
+
+scale trough highlight {
+    border: none;
+    background: @active;
+}
+
+scale slider {
+    background: @fg;
+    border: 1px solid @highlight-bg;
+}
+
+.per-app-volume {
+    padding: 0px 20px;
+}
+
+.per-app-volume label {
+    font-size: 12px;
+}
+
+.widget-title label {
+    color: @muted;
+    font-weight: bold;
+    margin: 0px 5px;
+}
+
+.notification-group button,
+.widget-title button {
+    border: 1px solid @muted;
+    padding: 2px 5px;
+    background: alpha(@highlight-bg, 0.3);
+}
+
+.notification-group button:hover,
+.widget-title button:hover {
+    border: 1px solid @fg;
+    background: @bg;
+}
+
+.widget-title button label {
+    color: @fg;
+}
+
+.notification {
+	border-radius: 5px;
+    border: 1px solid @fg;
+    padding: 2px 5px;
+    background: @bg;
+    color: @fg;
+}
+
+.notification-row button.close-button {
+    border: 1px solid transparent;
+    background: transparent;
+    margin: 3px;
+    padding: 3px;
+    min-width: 12px;
+    min-height: 12px;
+}
+
+.notification-row button.close-button:hover {
+    border: 1px solid @fg;
+    border-radius: 50px;
+}
+
+.notification-default-action:hover {
+    background: transparent;
+}

@@ -3,10 +3,11 @@
 - wallpaper UI client [-]
 - theming: wallpaper color picker
     waybar [+]
-- thunar config [+]
-    wallpaper change script
+- thunar config 
+    wallpaper change script [+]
 
 - swaync config & styling
+    - replace DND widget with custom button or menu
 - volume, brightness scripts
 
 - waybar: try add music widget

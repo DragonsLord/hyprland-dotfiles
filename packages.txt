@@ -35,3 +35,8 @@ sudo dnf install pass
 git config --global credential.credentialStore gpg
 Set Env Variable:
 export GPG_TTY=$(tty)
+
+
+=== font ====
+https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip
+https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Mononoki.zip
