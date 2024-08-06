@@ -11,6 +11,7 @@
 - volume, brightness scripts
 
 - waybar: try add music widget
+- waybar: fix margins/paddings
 
 apps:
  text editor
