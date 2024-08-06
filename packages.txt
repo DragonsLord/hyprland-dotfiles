@@ -40,3 +40,14 @@ export GPG_TTY=$(tty)
 === font ====
 https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip
 https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Mononoki.zip
+
+=== starship ===
+(Nerd Font required)
+https://starship.rs/
+
+sudo dnf copr enable atim/starship
+sudo dnf install starship
+
+add `eval "$(starship init bash)"` to .bashrc
+
+

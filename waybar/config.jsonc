@@ -41,12 +41,12 @@
         "icon-size": 16
     },
     "hyprland/language": {
-        "format": "⌨  {}",
+        "format": "⌨ {}",
         "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
     },
     "network": {
         "tooltip": true,
-        "format-wifi": "{signalStrength}% ",
+        "format-wifi": "{signalStrength}%  ",
         "rotate": 0,
         "format-ethernet": "",
         "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
@@ -57,8 +57,8 @@
         "interval": 2,
     },
     "wireplumber": {
-        "format": "{volume}% {icon}",
-        "format-muted": "",
+        "format": "{volume}% {icon} ",
+        "format-muted": " ",
         "on-click": "helvum",
         "format-icons": ["", "", ""]
     },
@@ -89,7 +89,7 @@
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
     "idle_inhibitor": {
-        "format": "{icon}",
+        "format": "{icon} ",
         "format-icons": {
             "activated": "",
             "deactivated": ""
@@ -127,7 +127,7 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}%  ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -141,8 +141,8 @@
       "format-icons": {
         "default": "",
         "performance": "",
-        "balanced": "",
-        "power-saver": ""
+        "balanced": " ",
+        "power-saver": " "
       }
     },
     
@@ -166,20 +166,8 @@
         "on-click": "pavucontrol"
     },
     "custom/power": {
-        "format": "",
+        "format": "󰐦",
         "rotate": 0,
         "on-click": "wlogout",
-    },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
