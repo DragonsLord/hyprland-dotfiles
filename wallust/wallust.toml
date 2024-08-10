@@ -106,6 +106,31 @@ icon_shutdown.target = "~/.themes/wallust/icons/shutdown.svg"
 icon_suspend.new_engine = true
 icon_suspend.template = "templates/icons/suspend.svg"
 icon_suspend.target = "~/.themes/wallust/icons/suspend.svg"
+
+icon_volume_minus.new_engine = true
+icon_volume_minus.template = "templates/icons/volume-minus.svg"
+icon_volume_minus.target = "~/.themes/wallust/icons/volume-minus.svg"
+
+icon_volume_off.new_engine = true
+icon_volume_off.template = "templates/icons/volume-off.svg"
+icon_volume_off.target = "~/.themes/wallust/icons/volume-off.svg"
+
+icon_volume_plus.new_engine = true
+icon_volume_plus.template = "templates/icons/volume-plus.svg"
+icon_volume_plus.target = "~/.themes/wallust/icons/volume-plus.svg"
+
+icon_brightness_minus.new_engine = true
+icon_brightness_minus.template = "templates/icons/brightness-minus.svg"
+icon_brightness_minus.target = "~/.themes/wallust/icons/brightness-minus.svg"
+
+icon_brightness_empty.new_engine = true
+icon_brightness_empty.template = "templates/icons/brightness-empty.svg"
+icon_brightness_empty.target = "~/.themes/wallust/icons/brightness-empty.svg"
+
+icon_brightness_plus.new_engine = true
+icon_brightness_plus.template = "templates/icons/brightness-plus.svg"
+icon_brightness_plus.target = "~/.themes/wallust/icons/brightness-plus.svg"
+
 # template: A relative path that points to a file where wallust.toml is located, usually at `~/.config/wallust/`
 # target: Absolute path in which to place a file with generated templated values
 # NOTE: prefer '' over "" for paths, avoids escaping.
