@@ -18,6 +18,8 @@
     - Generate custom theme from wallpaper
     - thunar
 
+- configure SDDM
+
 apps:
  text editor
  image viewer/editor?

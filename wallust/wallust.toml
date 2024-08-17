@@ -83,6 +83,10 @@ theme.new_engine = true
 theme.template = "templates/theme.css"
 theme.target = "~/.themes/wallust/colors.css"
 
+hyprcolors.new_engine = true
+hyprcolors.template = "templates/hyprland-colors.conf"
+hyprcolors.target = "~/.config/hypr/modules/gen/_colors.conf"
+
 icon_hibernate.new_engine = true
 icon_hibernate.template = "templates/icons/hibernate.svg"
 icon_hibernate.target = "~/.themes/wallust/icons/hibernate.svg"

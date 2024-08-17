@@ -5,7 +5,8 @@
     "spacing": 5, 
     "modules-left": [
         "idle_inhibitor",
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "tray"
         //"custom/media"
     ],
     "modules-center": [
@@ -25,7 +26,6 @@
         "power-profiles-daemon",
         "battery",
         "clock",
-        "tray",
         "custom/power"
     ],
     // Modules configuration
