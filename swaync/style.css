@@ -11,7 +11,7 @@
 @define-color fg @foreground;  /* foreground color */
 
 * {
-    font-family: "HackNerdFontMono";
+    font-family: "HackNerdFont";
     font-weight: bold;
     font-size: 16px;
 }
@@ -183,7 +183,7 @@ scale slider {
 }
 
 .notification {
-	border-radius: 5px;
+	  border-radius: 5px;
     border: 1px solid @fg;
     padding: 2px 5px;
     background: @bg;
@@ -206,4 +206,10 @@ scale slider {
 
 .notification-default-action:hover {
     background: transparent;
+}
+
+.notification image {
+  min-width: 24px;
+  margin-right: 10px;
+  border-radius: 0px;
 }

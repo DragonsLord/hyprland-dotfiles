@@ -50,4 +50,9 @@ sudo dnf install starship
 
 add `eval "$(starship init bash)"` to .bashrc
 
+=== Default GTK Theme ===
+sudo dnf install arc-theme
+gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
+gsettings set org.gnome.desktop.interface icon-theme Arc-Dark
+
 

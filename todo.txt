@@ -8,10 +8,15 @@
 
 - swaync config & styling
     - replace DND widget with custom button or menu
-- volume, brightness scripts
+- volume, brightness scripts [+,/]
 
 - waybar: try add music widget
-- waybar: fix margins/paddings
+- waybar: fix margins/paddings [+,/]
+
+- GTK apps theming
+    - Default: Ark-Dark [+]
+    - Generate custom theme from wallpaper
+    - thunar
 
 apps:
  text editor
