@@ -5,8 +5,7 @@ hypraland
 kitty
 swaync
 xdg-desktop-porta
-qt5ct
-qt6ct
+(qt5ct,qt6ct) [optional?, for KDE apps]
 waybar
 firefox
 git
@@ -18,6 +17,9 @@ hyprlock
 lazygit
 asusctl supergfxctl asus
 ImageMagic
+
+network-manager-applet (Fedora Netowrking group ??)
+sudo dnf --setopt=install_weak_deps=False install blueman
 
 ======= git-credential-manager ====
 https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/install.md
@@ -54,5 +56,9 @@ add `eval "$(starship init bash)"` to .bashrc
 sudo dnf install arc-theme
 gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
 gsettings set org.gnome.desktop.interface icon-theme Arc-Dark
+
+=== Display Management ===
+wdisplays
+https://wiki.hyprland.org/Nvidia/#multi-monitor-with-hybrid-graphics
 
 
