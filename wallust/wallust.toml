@@ -13,7 +13,7 @@
 #  * kmeans     - Kmeans is an algo that divides and picks pixels all around the image
 #                  Requires more tweaking and more in depth testing but for the most part
 #                  it just werks
-backend = "resized"
+backend = "full"
 
 # What color space to use to produce and select the most prominent colors:
 #  * lab      - Uses Cie L a b color space
@@ -79,61 +79,11 @@ palette = "dark"
 #alpha = 100
 
 [templates]
-theme.new_engine = true
-theme.template = "templates/theme.css"
-theme.target = "~/.themes/wallust/colors.css"
+dir.template = "icons"
+dir.target = "~/.themes/wallust/icons"
 
-hyprcolors.new_engine = true
-hyprcolors.template = "templates/hyprland-colors.conf"
-hyprcolors.target = "~/.config/hypr/modules/gen/_colors.conf"
-
-icon_hibernate.new_engine = true
-icon_hibernate.template = "templates/icons/hibernate.svg"
-icon_hibernate.target = "~/.themes/wallust/icons/hibernate.svg"
-
-icon_lock.new_engine = true
-icon_lock.template = "templates/icons/lock.svg"
-icon_lock.target = "~/.themes/wallust/icons/lock.svg"
-
-icon_logout.new_engine = true
-icon_logout.template = "templates/icons/logout.svg"
-icon_logout.target = "~/.themes/wallust/icons/logout.svg"
-
-icon_reboot.new_engine = true
-icon_reboot.template = "templates/icons/reboot.svg"
-icon_reboot.target = "~/.themes/wallust/icons/reboot.svg"
-
-icon_shutdown.new_engine = true
-icon_shutdown.template = "templates/icons/shutdown.svg"
-icon_shutdown.target = "~/.themes/wallust/icons/shutdown.svg"
-
-icon_suspend.new_engine = true
-icon_suspend.template = "templates/icons/suspend.svg"
-icon_suspend.target = "~/.themes/wallust/icons/suspend.svg"
-
-icon_volume_minus.new_engine = true
-icon_volume_minus.template = "templates/icons/volume-minus.svg"
-icon_volume_minus.target = "~/.themes/wallust/icons/volume-minus.svg"
-
-icon_volume_off.new_engine = true
-icon_volume_off.template = "templates/icons/volume-off.svg"
-icon_volume_off.target = "~/.themes/wallust/icons/volume-off.svg"
-
-icon_volume_plus.new_engine = true
-icon_volume_plus.template = "templates/icons/volume-plus.svg"
-icon_volume_plus.target = "~/.themes/wallust/icons/volume-plus.svg"
-
-icon_brightness_minus.new_engine = true
-icon_brightness_minus.template = "templates/icons/brightness-minus.svg"
-icon_brightness_minus.target = "~/.themes/wallust/icons/brightness-minus.svg"
-
-icon_brightness_empty.new_engine = true
-icon_brightness_empty.template = "templates/icons/brightness-empty.svg"
-icon_brightness_empty.target = "~/.themes/wallust/icons/brightness-empty.svg"
-
-icon_brightness_plus.new_engine = true
-icon_brightness_plus.template = "templates/icons/brightness-plus.svg"
-icon_brightness_plus.target = "~/.themes/wallust/icons/brightness-plus.svg"
+theme = { template = "theme.css", target = "~/.themes/wallust/colors.css" }
+hyprcolors = { template = "hyprland-colors.conf", target = "~/.config/hypr/modules/gen/_colors.conf" }
 
 # template: A relative path that points to a file where wallust.toml is located, usually at `~/.config/wallust/`
 # target: Absolute path in which to place a file with generated templated values

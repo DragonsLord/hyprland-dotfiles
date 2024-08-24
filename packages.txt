@@ -21,6 +21,12 @@ ImageMagic
 network-manager-applet (Fedora Netowrking group ??)
 sudo dnf --setopt=install_weak_deps=False install blueman
 
+====== wallust ======
+sudp dnf install cargo
+cargo install wallust
+
+https://codeberg.org/explosion-mental/wallust/src/branch/master#installation
+
 ======= git-credential-manager ====
 https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/install.md
 
