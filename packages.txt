@@ -31,6 +31,10 @@ dotnet tool install -g git-credential-manager
 git-credential-manager configure
 
 credential store setup:
+[libsecret]
+sudo dnf install gnome-keyring
+git config --global credential.credentialStore secretservice
+[GPG (OLD)]
 https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md#gpgpass-compatible-files
 sudo dnf install pass
 === generate key with: gpg --generate-key && pass init <gpg-key-uid>
