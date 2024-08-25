@@ -17,7 +17,7 @@
 	<name>Set Screen Wallpaper</name>
 	<submenu>Desktop</submenu>
 	<unique-id>1720960214068997-1</unique-id>
-	<command>sh $HOME/.config/scripts/wallpaper.sh --set %f --no-ctl</command>
+	<command>pde theme set-wallpaper %f</command>
 	<description></description>
 	<range>*</range>
 	<patterns>*</patterns>

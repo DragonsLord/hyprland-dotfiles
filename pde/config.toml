@@ -1,0 +1,12 @@
+[general]
+resource_root_dir = "~/.desk-env"
+notification_timeout_ms = 2000
+icons_dir = "~/.desk-env/theme/wallust/icons"
+
+[volume]
+step = 2
+limit = 1.2
+
+[brightness]
+step = 5
+keyboard_device = "asus::kbd_backlight"

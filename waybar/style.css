@@ -1,4 +1,4 @@
-@import "../../.themes/wallust/colors.css";
+@import "../../.desk-env/theme/wallust/colors.css";
 
 @define-color text @color5;
 @define-color highlight @color1;
