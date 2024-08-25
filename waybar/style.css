@@ -1,18 +1,5 @@
 @import "../../.desk-env/theme/wallust/colors.css";
 
-@define-color text @color5;
-@define-color highlight @color1;
-@define-color highlight-bg @color8;
-@define-color unselected @color3;
-@define-color border @color2;
-/*@define-color active @color1;*/
-/*@define-color muted @color8;*/
-@define-color bg @background;  /* background color */
-@define-color fg @foreground;  /* foreground color */
-
-/*@define-color contrast1 @color1;*/
-/*@define-color contrast2 @color4;*/
-
 /*default styles*/
 * {
 	min-height: 0;
@@ -51,7 +38,7 @@ window#waybar {
 /*module specific styles*/
 
 #workspaces button {
-    color: @unselected;
+    color: @text-muted;
     box-shadow: none;
     text-shadow: none;
     border-radius: 3px;
@@ -60,23 +47,23 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    color: @highlight;
-    border: solid 1px @highlight;
+    color: @text;
+    border: solid 1px @highlight-border;
     background: transparent;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button.active {
-    color: @highlight;
-    background-color: alpha(@highlight-bg, 0.3); 
+    color: @fg-alt;
+    background-color: alpha(@bg-alt, 0.3); 
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #window {
     text-shadow: -1px 0 @bg, 0 1px @bg, 1px 0 @bg, 0 -1px @bg; /* text outline */
-    color: @fg; 
+    color: @fg-alt;
 }
 
 @keyframes blink {
@@ -87,7 +74,7 @@ window#waybar {
 
 #battery.critical:not(.charging) {
   background-color: @bg;
-  color: @highlight;
+  color: @fg;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;

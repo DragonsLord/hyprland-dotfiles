@@ -1,10 +1,5 @@
 @import "../../.desk-env/theme/wallust/colors.css";
 
-@define-color text @foreground;
-@define-color highlight @color2;
-@define-color border @color2;
-@define-color bg @background;
-
 * {
 	background-image: none;
 	box-shadow: none;
@@ -30,8 +25,13 @@ button {
 	background-size: 25%;
 }
 
-button:focus, button:active, button:hover {
-	background-color: alpha(@highlight, 0.9);
+button:focus, button:active {
+  border-color: @highlight-border;
+	outline-style: none;
+}
+
+button:hover {
+	background-color: alpha(@bg-alt, 0.9);
 	outline-style: none;
 }
 

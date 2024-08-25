@@ -1,0 +1,15 @@
+@define-color fg {{foreground}};
+@define-color fg-alt {{color7}};
+@define-color bg {{background}}; /* same as col0*/
+@define-color bg-alt {{color8}};
+@define-color cursor {{cursor}};
+
+@define-color fill {{color4 | blend(color2)}};
+
+@define-color border {{color2}};
+@define-color muted-border {{color2 | blend(background)}};
+@define-color highlight-border {{color2 | blend(foreground)}};
+
+@define-color text {{color6 | blend(foreground)}};
+@define-color text-muted {{color6 | blend(background)}};
+

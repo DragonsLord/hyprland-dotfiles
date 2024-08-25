@@ -1,15 +1,5 @@
 @import "../../.desk-env/theme/wallust/colors.css";
 
-@define-color text @color5;
-@define-color active @color2;
-@define-color highlight @color1;
-@define-color highlight-bg @color8;
-@define-color unselected @color3;
-@define-color muted @color3;
-@define-color border @color3;
-@define-color bg @background;  /* background color */
-@define-color fg @foreground;  /* foreground color */
-
 * {
     font-family: "HackNerdFont";
     font-weight: bold;
@@ -19,19 +9,19 @@
 .control-center {
     background: alpha(@bg, 0.9);
     border: 1px solid @border;
-    color: @muted;
+    color: @text-muted;
     border-radius: 6px;
     margin: 3px 0px;
 }
 
 .widget-label label {
     font-size: 18px;
-    color: @muted;
+    color: @text-muted;
     padding: 0px 130px;
 }
 
 .widget-dnd {
-    background: alpha(@highlight-bg, 0.2);
+    background: alpha(@bg-alt, 0.2);
     padding: 1px 10px;
     margin: 0px 10px;
     border-radius: 5px;
@@ -42,7 +32,7 @@
     margin: 5px 0px;
     border-radius: 15px;
     border: 1px solid @border;
-    background: @muted;
+    background: @bg-alt;
 }
 
 .widget-dnd switch:hover {
@@ -50,7 +40,7 @@
 }
 
 .widget-dnd switch:checked {
-    background: @active;
+    background: @fill;
 }
 
 .widget-dnd switch slider {
@@ -70,7 +60,7 @@
 }
 
 .widget-mpris-subtitle {
-    color: @muted;
+    color: @text;
     font-size: 12px
 }
 
@@ -88,7 +78,7 @@
 }
 
 .widget-mpris button:disabled {
-    color: alpha(@muted, 0.4);
+    color: alpha(@text-muted, 0.4);
     border: none;
     -gtk-icon-shadow: none;
 }
@@ -108,7 +98,7 @@ button:hover {
 }
 
 button:disabled {
-    color: alpha(@muted, 0.4);
+    color: alpha(@text-muted, 0.4);
     border: none;
     -gtk-icon-shadow: none;
 }
@@ -121,7 +111,7 @@ button:disabled {
 .widget-volume {
     color: @fg;
     font-size: 24px;
-    background: alpha(@highlight-bg, 0.2);
+    background: alpha(@bg-alt, 0.2);
     margin: 0px 10px;
     padding: 3px 5px;
 }
@@ -136,19 +126,19 @@ button:disabled {
 
 .widget-backlight label,
 .widget-volume label {
-    color: @fg;
+    color: @fg-alt;
     font-size: 28px;
     padding: 0px 3px;
 }
 
 scale trough highlight {
     border: none;
-    background: @active;
+    background: @fill;
 }
 
 scale slider {
     background: @fg;
-    border: 1px solid @highlight-bg;
+    border: 1px solid @bg-alt;
 }
 
 .per-app-volume {
@@ -160,16 +150,16 @@ scale slider {
 }
 
 .widget-title label {
-    color: @muted;
+    color: @text-muted;
     font-weight: bold;
     margin: 0px 5px;
 }
 
 .notification-group button,
 .widget-title button {
-    border: 1px solid @muted;
+    border: 1px solid @muted-border;
     padding: 2px 5px;
-    background: alpha(@highlight-bg, 0.3);
+    background: alpha(@bg-alt, 0.3);
 }
 
 .notification-group button:hover,
