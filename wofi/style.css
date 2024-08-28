@@ -5,7 +5,7 @@ window {
     margin: 5px;
     border: 1px solid @border;
     border-radius: 5px;
-    background-color: alpha(@bg, 0.9);
+    background-color: alpha(@bg, 0.95);
 }
 
 #input {
@@ -31,7 +31,7 @@ image {
 }
 
 #text {
-    color: mix(@text, @bg, 0.3);
+    color: @text-muted;
 }
 
 #text:selected {

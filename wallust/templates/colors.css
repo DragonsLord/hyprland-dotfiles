@@ -4,12 +4,15 @@
 @define-color bg-alt {{color8}};
 @define-color cursor {{cursor}};
 
-@define-color fill {{color4 | blend(color2)}};
+{% set color = color2 | blend(color3) | blend(color4) | blend(color5) | blend(color6) %}
+@define-color fill {{color}};
+@define-color muted-fill {{color | blend(background)}};
 
-@define-color border {{color2}};
-@define-color muted-border {{color2 | blend(background)}};
-@define-color highlight-border {{color2 | blend(foreground)}};
+@define-color border {{color}};
+@define-color muted-border {{color | blend(background)}};
+@define-color highlight-border {{color | blend(foreground)}};
 
-@define-color text {{color6 | blend(foreground)}};
-@define-color text-muted {{color6 | blend(background)}};
+{% set text_color = color | blend(foreground) %}
+@define-color text {{text_color | blend(foreground)}};
+@define-color text-muted {{text_color | blend(background)}};
 

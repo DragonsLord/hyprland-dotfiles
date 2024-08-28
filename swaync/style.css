@@ -31,12 +31,12 @@
 .widget-dnd switch {
     margin: 5px 0px;
     border-radius: 15px;
-    border: 1px solid @border;
-    background: @bg-alt;
+    border: 1px solid @muted-border;
+    background: @muted-fill;
 }
 
 .widget-dnd switch:hover {
-    border: 1px solid @fg;
+    border: 1px solid @highlight-border;
 }
 
 .widget-dnd switch:checked {

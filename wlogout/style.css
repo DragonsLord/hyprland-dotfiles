@@ -10,13 +10,13 @@ window {
 }
 
 button {
-    margin: 3px 3px 3px 3px;
-    padding: 5px;
-    border-radius: 15px;
-    border-color: @border;
-    color: @text;
-    font-size: 22px;
-    text-shadow: -1px 0 @bg, 0 1px @bg, 1px 0 @bg, 0 -1px @bg; /* text outline */
+  margin: 3px 3px 3px 3px;
+  padding: 5px;
+  border-radius: 15px;
+  border-color: @muted-border;
+  color: @text-muted;
+  font-size: 22px;
+  text-shadow: -1px 0 @bg, 0 1px @bg, 1px 0 @bg, 0 -1px @bg; /* text outline */
 	background-color: @bg;
 	border-style: solid;
 	border-width: 3px;
@@ -26,11 +26,14 @@ button {
 }
 
 button:focus, button:active {
+  color: @text;
   border-color: @highlight-border;
 	outline-style: none;
 }
 
 button:hover {
+  color: @text;
+  border-color: @border;
 	background-color: alpha(@bg-alt, 0.9);
 	outline-style: none;
 }
