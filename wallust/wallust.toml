@@ -85,6 +85,7 @@ dir.target = "~/.desk-env/theme/wallust/icons"
 colors = { template = "colors.css", target = "~/.desk-env/theme/wallust/colors.css" }
 hyprcolors = { template = "hyprland-colors.conf", target = "~/.config/hypr/modules/gen/_colors.conf" }
 kitty = { template = "kitty.conf", target = "~/.config/kitty/themes/gen/_colors.conf" }
+nvim = { template = "nvim.lua.jinja", target = "~/.config/nvim/lua/gen/wallust.lua" }
 
 # template: A relative path that points to a file where wallust.toml is located, usually at `~/.config/wallust/`
 # target: Absolute path in which to place a file with generated templated values

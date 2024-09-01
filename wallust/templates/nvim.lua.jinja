@@ -1,0 +1,42 @@
+local wallust = {}
+
+{% set color = color2 | blend(color3) | blend(color4) | blend(color5) | blend(color6) %}
+-- based on https://github.com/folke/tokyonight.nvim/blob/main/lua/tokyonight/colors/storm.lua
+function wallust.apply_colors(colors)
+	colors.bg = "{{background}}"
+	colors.bg_dark = "{{background | darken(0.2)}}"
+	colors.bg_highlight = "{{color8 | darken(0.5)}}"
+	colors.fg = "{{foreground}}"
+	colors.fg_dark = "{{color7}}"
+	colors.fg_gutter = "{{foreground | darken(0.4)}}"
+	colors.blue = "{{color | blend("#7aa2f7")}}"
+	colors.blue0 = "{{color | blend("#3d59a1")}}"
+	colors.blue1 = "{{color | blend("#2ac3de")}}"
+	colors.blue2 = "{{color | blend("#0db9d7")}}"
+	colors.blue5 = "{{color | blend("#89ddff")}}"
+	colors.blue6 = "{{color | blend("#b4f9f8")}}"
+	colors.blue7 = "{{color | blend("#394b70")}}"
+	colors.comment = "{{color | blend("#565f89")}}"
+	colors.cyan = "{{color | blend("#7dcfff")}}"
+	colors.dark3 = "{{color | blend("#545c7e")}}"
+	colors.dark5 = "{{color | blend("#737aa2")}}"
+	colors.green = "{{color | blend("#9ece6a")}}"
+	colors.green1 = "{{color | blend("#73daca")}}"
+	colors.green2 = "{{color | blend("#41a6b5")}}"
+	colors.magenta = "{{color | blend("#bb9af7")}}"
+	colors.magenta2 = "{{color | blend("#ff007c")}}"
+	colors.orange = "{{color | blend("#ff9e64")}}"
+	colors.purple = "{{color | blend("#9d7cd8")}}"
+	colors.red = "{{color | blend("#f7768e")}}"
+	colors.red1 = "{{color | blend("#db4b4b")}}"
+	colors.teal = "{{color | blend("#1abc9c")}}"
+	colors.terminal_black = "{{color | blend("#414868")}}"
+	colors.yellow = "{{color | blend("#e0af68")}}"
+	colors.git = {
+		add = "{{color | blend("#449dab")}}",
+		change = "{{color | blend("#6183bb")}}",
+		delete = "{{color | blend("#914c54")}}",
+	}
+end
+
+return wallust
