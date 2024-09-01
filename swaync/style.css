@@ -1,7 +1,7 @@
 @import "../../.desk-env/theme/wallust/colors.css";
 
 * {
-    font-family: "HackNerdFont";
+    font-family: "HackNerdFontMono";
     font-weight: bold;
     font-size: 16px;
 }
