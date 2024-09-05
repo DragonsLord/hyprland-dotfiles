@@ -79,29 +79,12 @@ palette = "dark"
 #alpha = 100
 
 [templates]
-dir.template = "icons"
-dir.target = "~/.desk-env/theme/wallust/icons"
+dir = { template = "icons", target = "~/.desk-env/theme/wallust/icons" }
 
 colors = { template = "colors.css", target = "~/.desk-env/theme/wallust/colors.css" }
 hyprcolors = { template = "hyprland-colors.conf", target = "~/.config/hypr/modules/gen/_colors.conf" }
 kitty = { template = "kitty.conf", target = "~/.config/kitty/themes/gen/_colors.conf" }
 nvim = { template = "nvim.lua.jinja", target = "~/.config/nvim/lua/gen/wallust.lua" }
-
-# template: A relative path that points to a file where wallust.toml is located, usually at `~/.config/wallust/`
-# target: Absolute path in which to place a file with generated templated values
-# NOTE: prefer '' over "" for paths, avoids escaping.
-#zathura = { template = 'zathura', target = '~/.config/zathura/zathurarc' }
-
-# OPTIONALLY It can accept `new_engine = true`: This "new engine" difers by using  double brackets like `{{variable}}`
-# instead of one like usual, which helps with file formats that use brackets like json. With the `new_engine` enabled
-# you can escape and produce a literal `{{` by `{{{{}}`, and for `}}` you escape it with `{{}}}}`.
-#dunst = { template = 'dunstconfig', target = '~/.config/dunst/dunstrc', new_engine = true }
-
-# template field can be express as `src` and target as `dst` for shorter naming:
-#alacritty = { src = 'alacrittycfg', dst = '~/.config/alacritty/alacritty.toml' }
-# As well as using dotted toml fields, both `alacritty` fields represent the same;
-#alacritty.src = 'alacrittycfg'
-#alacritty.dst = '~/.config/alacritty/alacritty.toml'
 
 # REMINDER Variables and methods that can be used with templating:
 #  wallpaper:  The full path to the current wallpaper, colorscheme file or the name of the theme in use.

@@ -5,10 +5,10 @@ local wallust = {}
 function wallust.apply_colors(colors)
 	colors.bg = "{{background}}"
 	colors.bg_dark = "{{background | darken(0.2)}}"
-	colors.bg_highlight = "{{color8 | darken(0.5)}}"
+	colors.bg_highlight = "{{background | lighten(0.1)}}"
 	colors.fg = "{{foreground}}"
 	colors.fg_dark = "{{color7}}"
-	colors.fg_gutter = "{{foreground | darken(0.4)}}"
+	colors.fg_gutter = "{{color7 | blend("#3b4261") | darken(0.3)}}"
 	colors.blue = "{{color | blend("#7aa2f7")}}"
 	colors.blue0 = "{{color | blend("#3d59a1")}}"
 	colors.blue1 = "{{color | blend("#2ac3de")}}"
