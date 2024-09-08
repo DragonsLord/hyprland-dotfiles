@@ -1,0 +1,89 @@
+default_profile = 'asus_laptop'
+
+[profiles]
+asus_laptop = [
+  "hardware_support",
+  "hyprland",
+  "common_soft",
+  "gtk_theme",
+  "fonts",
+  "asus",
+  "wallust",
+  "starship",
+  "git-credential-manager",
+]
+
+test_zip = ["fonts"]
+
+[tools]
+dnf_group = "sudo dnf group install"
+dnf_no_week_refs = "sudo dnf --setopt=install_weak_deps=False install"
+dnf = "sudo dnf install"
+cargo = "cargo install"
+
+[modules.hardware_support]
+tool = "dnf_group"
+packages = ["hardware-support"]
+
+[modules.hyprland]
+tool = "dnf"
+packages = [
+  "sddm",
+  "hypraland",
+  "hyprlock",
+  "swaync",
+  "swaybg",
+  "xfce-polkit",
+  "wlogout",
+  "waybar",
+  "network-manager-applet",
+  "blueman",
+  "kitty",
+  "xdg-desktop-portal",
+  "qt5ct",
+  "qt6ct",
+  "wdisplays",
+] # wireplumber?
+
+[modules.asus]
+tool = "dnf"
+packages = ["asusctl", "supergfxctl", "asus"]
+
+[modules.common_soft]
+tool = "dnf"
+packages = ["neovim", "firefox", "thunar", "lazygit", "gnome-keyring"]
+
+[modules.wallust]
+tool = "cargo"
+packages = ["wallust"]
+
+[modules.git-credential-manager]
+#TODO: Deps verification
+cmd = [
+  "wget https://dot.net/v1/dotnet-install.sh",
+  "chmod +x dotnet-install.sh",
+  "./dotnet-install.sh -c 7.0",
+  "git-credential-manager configure",
+  "git config --global credential.credentialStore secretservice",
+]
+
+[modules.fonts]
+extract_zip_to = "~/.fonts/test"
+packages = [
+  "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip",
+  "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Mononoki.zip",
+]
+
+[modules.starship]
+cmd = [
+  "sudo dnf copr enable atim/starship",
+  "sudo dnf install starship",
+  "echo 'eval \"$(starship init bash)\"' >> ~/.bashrc",
+]
+
+[modules.gtk_theme]
+cmd = [
+  "sudo dnf install arc-theme",
+  "gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark",
+  "gsettings set org.gnome.desktop.interface icon-theme Arc-Dark",
+]
