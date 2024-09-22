@@ -8,24 +8,35 @@ asus_laptop = [
   "gtk_theme",
   "fonts",
   "asus",
-  "wallust",
   "starship",
   "git-credential-manager",
 ]
 
-test_zip = ["fonts"]
+[tools.dnf_group]
+cmd = "sudo dnf group install {}"
+batching = true
 
-[tools]
-dnf_group = "sudo dnf group install"
-dnf_no_week_refs = "sudo dnf --setopt=install_weak_deps=False install"
-dnf = "sudo dnf install"
-cargo = "cargo install"
+[tools.dnf]
+cmd = "sudo dnf install {}"
+batching = true
 
-[modules.hardware_support]
+[tools.dnf_no_week_refs]
+cmd = "sudo dnf --setopt=install_weak_deps=False install"
+batching = true
+
+[tools.dnf_copr]
+cmd = "sudo dnf copr enable {}"
+batching = false
+
+[tools.cargo]
+cmd = "cargo install"
+batching = true
+
+[[modules.hardware_support]]
 tool = "dnf_group"
 packages = ["hardware-support"]
 
-[modules.hyprland]
+[[modules.hyprland]]
 tool = "dnf"
 packages = [
   "sddm",
@@ -44,20 +55,22 @@ packages = [
   "qt6ct",
   "wdisplays",
 ] # wireplumber?
-
-[modules.asus]
-tool = "dnf"
-packages = ["asusctl", "supergfxctl", "asus"]
-
-[modules.common_soft]
-tool = "dnf"
-packages = ["neovim", "firefox", "thunar", "lazygit", "gnome-keyring"]
-
-[modules.wallust]
+[[modules.hyprland]]
 tool = "cargo"
 packages = ["wallust"]
 
-[modules.git-credential-manager]
+[[modules.asus]]
+tool = "dnf_copr"
+packages = ["copr.fedorainfracloud.org/lukenukem/asus-linux"]
+[[modules.asus]]
+tool = "dnf"
+packages = ["asusctl", "supergfxctl", "asus"]
+
+[[modules.common_soft]]
+tool = "dnf"
+packages = ["neovim", "firefox", "thunar", "lazygit", "gnome-keyring"]
+
+[[modules.git-credential-manager]]
 #TODO: Deps verification
 cmd = [
   "wget https://dot.net/v1/dotnet-install.sh",
@@ -67,21 +80,21 @@ cmd = [
   "git config --global credential.credentialStore secretservice",
 ]
 
-[modules.fonts]
+[[modules.fonts]]
 extract_zip_to = "~/.fonts/test"
 packages = [
   "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip",
   "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Mononoki.zip",
 ]
 
-[modules.starship]
+[[modules.starship]]
 cmd = [
   "sudo dnf copr enable atim/starship",
   "sudo dnf install starship",
   "echo 'eval \"$(starship init bash)\"' >> ~/.bashrc",
 ]
 
-[modules.gtk_theme]
+[[modules.gtk_theme]]
 cmd = [
   "sudo dnf install arc-theme",
   "gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark",
