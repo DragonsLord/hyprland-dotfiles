@@ -1,0 +1,51 @@
+name = "hyprland"
+
+[[steps]]
+name = "packages"
+tool = "install"
+packages = [
+  "sddm",
+  "hypraland",
+  "hyprlock",
+  "swaync",
+  "swaybg",
+  "xfce-polkit",
+  "wlogout",
+  "waybar",
+  "network-manager-applet",
+  "blueman",
+  "kitty",
+  "xdg-desktop-portal",
+  "qt5ct",
+  "qt6ct",
+  "wdisplays",
+] # wireplumber?
+
+[[steps]]
+name = "soft"
+tool = "install"
+packages = ["firefox", "thunar", "gnome-keyring"]
+
+[[steps]]
+name = "wallust"
+tool = "cargo"
+packages = ["wallust"]
+
+[[steps]]
+name = "git credentiol manager"
+#TODO: Deps verification
+cmd = [
+  "wget https://dot.net/v1/dotnet-install.sh",
+  "chmod +x dotnet-install.sh",
+  "./dotnet-install.sh -c 7.0",
+  "git-credential-manager configure",
+  "git config --global credential.credentialStore secretservice",
+]
+
+[[steps]]
+name = "set arc theme"
+cmd = [
+  "sudo dnf install arc-theme",
+  "gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark",
+  "gsettings set org.gnome.desktop.interface icon-theme Arc-Dark",
+]

@@ -1,0 +1,24 @@
+name = "common"
+
+[[steps]]
+name = "hardware support"
+tool = "install_group"
+packages = ["hardware-support"]
+
+[[steps]]
+name = "repositories"
+tool = "add_repo"
+packages = ["atim/starship", "atim/lazygit"]
+
+[[steps]]
+name = "packages"
+tool = "install"
+packages = ["neovim", "lazygit", "starship"]
+
+[[steps]]
+name = "fonts"
+extract_zip_to = "~/.fonts/test"
+packages = [
+  "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip",
+  "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Mononoki.zip",
+]
