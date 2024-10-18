@@ -1,13 +1,18 @@
 name = "hyprland"
 
 [[steps]]
+name = "repos"
+tool = "add_repo"
+packages = ["erikeider/SwayNotificationCenter"]
+
+[[steps]]
 name = "packages"
 tool = "install"
 packages = [
   "sddm",
-  "hypraland",
+  "hyprland",
   "hyprlock",
-  "swaync",
+  "SwayNotificationCenter",
   "swaybg",
   "xfce-polkit",
   "wlogout",
@@ -33,11 +38,9 @@ packages = ["wallust"]
 
 [[steps]]
 name = "git credentiol manager"
-#TODO: Deps verification
 cmd = [
-  "wget https://dot.net/v1/dotnet-install.sh",
-  "chmod +x dotnet-install.sh",
-  "./dotnet-install.sh -c 7.0",
+  "sudo dnf install -y dotnet-sdk-8.0",
+  "dotnet tool install -g git-credential-manager",
   "git-credential-manager configure",
   "git config --global credential.credentialStore secretservice",
 ]
@@ -45,7 +48,7 @@ cmd = [
 [[steps]]
 name = "set arc theme"
 cmd = [
-  "sudo dnf install arc-theme",
+  "sudo dnf install -y arc-theme",
   "gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark",
   "gsettings set org.gnome.desktop.interface icon-theme Arc-Dark",
 ]

@@ -1,17 +1,17 @@
 [install_group]
-cmd = "sudo dnf group install"
+cmd = "sudo dnf group install -y"
 batching = true
 
 [install]
-cmd = "sudo dnf install"
+cmd = "sudo dnf install -y"
 batching = true
 
 [install_no_week_refs]
-cmd = "sudo dnf --setopt=install_weak_deps=False install"
+cmd = "sudo dnf --setopt=install_weak_deps=False install -y"
 batching = true
 
 [add_repo]
-cmd = "sudo dnf copr enable"
+cmd = "sudo dnf copr enable -y"
 batching = false
 
 [cargo]
