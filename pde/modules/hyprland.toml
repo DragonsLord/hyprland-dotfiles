@@ -32,12 +32,7 @@ tool = "install"
 packages = ["firefox", "thunar", "gnome-keyring"]
 
 [[steps]]
-name = "wallust"
-tool = "cargo"
-packages = ["wallust"]
-
-[[steps]]
-name = "git credentiol manager"
+name = "git credential manager"
 script = """
   sudo dnf install -y dotnet-sdk-8.0
   dotnet tool install -g git-credential-manager
@@ -46,9 +41,27 @@ script = """
 """
 
 [[steps]]
+name = "wallust"
+tool = "cargo"
+packages = ["wallust"]
+
+[[steps]]
+name = "init wallust theme"
+script = """
+  pde theme set-wallpaper --no-reload ~/.config/wallust/init-wallpaper.png 
+"""
+
+[[steps]]
 name = "set arc theme"
 script = """
   sudo dnf install -y arc-theme
   gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
   gsettings set org.gnome.desktop.interface icon-theme Arc-Dark
+"""
+
+[[steps]]
+name = "set graphical target"
+script = """
+  sudo systemctl enable sddm
+  sudo systemctl set-default graphical.target
 """
