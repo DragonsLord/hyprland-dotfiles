@@ -1,0 +1,9 @@
+name = "vm"
+
+[[steps]]
+name = "kitty vm config"
+script = """
+echo 'export LIBGL_ALWAYS_SOFTWARE=true' >> ~/.bashrc
+echo 'export GALLIUM_DRIVER=llvmpipe' >> ~/.bashrc
+source ~/.bashrc
+"""

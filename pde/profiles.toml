@@ -3,4 +3,5 @@ tools_definitions = 'tools.toml'
 modules_definitions = 'modules'
 
 [profiles]
+vm = ["common", "hyprland", "vm"]
 asus_laptop = ["common", "hyprland", "asus"]
