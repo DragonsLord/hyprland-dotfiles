@@ -4,4 +4,4 @@ modules_definitions = 'modules'
 
 [profiles]
 vm = ["common", "hyprland", "vm"]
-asus_laptop = ["common", "hyprland", "asus"]
+asus_laptop = ["common", "hyprland", "asus", "nvidia"]
