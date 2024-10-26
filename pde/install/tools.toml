@@ -13,3 +13,7 @@ batching = false
 [cargo]
 cmd = "cargo install"
 batching = true
+
+[flatpak]
+cmd = "flatpak install -y"
+batching = true
