@@ -23,13 +23,12 @@ packages = [
   "xdg-desktop-portal",
   "qt5ct",
   "qt6ct",
-  "wdisplays",
-] # wireplumber?
+]
 
 [[steps]]
 name = "soft"
 tool = "install"
-packages = ["firefox", "thunar", "gnome-keyring"]
+packages = ["firefox", "thunar", "wdisplays", "gnome-keyring", "seahorse"]
 
 [[steps]]
 name = "git credential manager"
