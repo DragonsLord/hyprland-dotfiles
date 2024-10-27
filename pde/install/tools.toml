@@ -1,0 +1,19 @@
+[install_group]
+cmd = "sudo dnf group install -y"
+batching = true
+
+[install]
+cmd = "sudo dnf install -y"
+batching = true
+
+[add_repo]
+cmd = "sudo dnf copr enable -y"
+batching = false
+
+[cargo]
+cmd = "cargo install"
+batching = true
+
+[flatpak]
+cmd = "flatpak install -y flathub"
+batching = true

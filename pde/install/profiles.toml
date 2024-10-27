@@ -1,0 +1,7 @@
+default_profile = 'asus_laptop'
+tools_definitions = 'tools.toml'
+modules_definitions = 'modules'
+
+[profiles]
+vm = ["common", "hyprland", "vm", "apps"]
+asus_laptop = ["common", "hyprland", "asus", "nvidia", "apps"]

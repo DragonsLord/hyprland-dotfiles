@@ -1,0 +1,11 @@
+name = "apps"
+
+[[steps]]
+name = "flathub apps"
+tool = "flatpak"
+packages = [
+  "io.missioncenter.MissionCenter",
+  "org.gnome.TextEditor",
+  "org.kde.krita",
+  "io.mpv.Mpv",
+]

@@ -1,0 +1,12 @@
+name = "nvidia"
+
+[[steps]]
+name = "nvidia drivers"
+tool = "install"
+packages = [
+  "akmod-nvidia",
+  "xorg-x11-drv-nvidia-cuda",
+  "libva",
+  "libva-nvidia-driver",
+  "egl-wayland",
+]

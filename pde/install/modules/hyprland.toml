@@ -1,0 +1,66 @@
+name = "hyprland"
+
+[[steps]]
+name = "repos"
+tool = "add_repo"
+packages = ["erikreider/SwayNotificationCenter"]
+
+[[steps]]
+name = "packages"
+tool = "install"
+packages = [
+  "sddm",
+  "hyprland",
+  "hyprlock",
+  "SwayNotificationCenter",
+  "swaybg",
+  "xfce-polkit",
+  "wlogout",
+  "waybar",
+  "network-manager-applet",
+  "blueman",
+  "kitty",
+  "xdg-desktop-portal",
+  "qt5ct",
+  "qt6ct",
+]
+
+[[steps]]
+name = "soft"
+tool = "install"
+packages = ["firefox", "thunar", "wdisplays", "gnome-keyring", "seahorse"]
+
+[[steps]]
+name = "git credential manager"
+script = """
+  sudo dnf install -y dotnet-sdk-8.0
+  dotnet tool install -g git-credential-manager
+  ~/.dotnet/tools/git-credential-manager configure
+  git config --global credential.credentialStore secretservice
+"""
+
+[[steps]]
+name = "wallust"
+tool = "cargo"
+packages = ["wallust"]
+
+[[steps]]
+name = "init wallust theme"
+script = """
+  pde theme set-wallpaper --no-reload ~/.config/wallust/init-wallpaper.png 
+"""
+
+[[steps]]
+name = "set arc theme"
+script = """
+  sudo dnf install -y arc-theme
+  gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
+  gsettings set org.gnome.desktop.interface icon-theme Arc-Dark
+"""
+
+[[steps]]
+name = "set graphical target"
+script = """
+  sudo systemctl enable sddm
+  sudo systemctl set-default graphical.target
+"""

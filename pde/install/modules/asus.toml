@@ -1,0 +1,11 @@
+name = "asus"
+
+[[steps]]
+name = "add asus repo"
+tool = "add_repo"
+packages = ["copr.fedorainfracloud.org/lukenukem/asus-linux"]
+
+[[steps]]
+name = "add asus packages"
+tool = "install"
+packages = ["asusctl", "supergfxctl", "asus"]

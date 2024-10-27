@@ -1,0 +1,37 @@
+name = "common"
+
+[[steps]]
+name = "hardware support"
+tool = "install_group"
+packages = ["hardware-support"]
+
+[[steps]]
+name = "repositories"
+tool = "add_repo"
+packages = ["atim/starship", "atim/lazygit"]
+
+[[steps]]
+name = "packages"
+tool = "install"
+packages = ["neovim", "lazygit", "starship"]
+
+[[steps]]
+name = "add rpm fusion repos"
+script = """
+sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+"""
+
+[[steps]]
+name = "fonts"
+extract_zip_to = "~/.fonts/test"
+packages = [
+  "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip",
+  "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Mononoki.zip",
+]
+
+[[steps]]
+name = "flatpak"
+script = """
+  sudo dnf install -y flatpak
+  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+"""

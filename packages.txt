@@ -4,7 +4,7 @@ sddm
 hypraland
 kitty
 swaync
-xdg-desktop-porta
+xdg-desktop-portal
 (qt5ct,qt6ct) [optional?, for KDE apps]
 waybar
 firefox
@@ -21,7 +21,7 @@ network-manager-applet (Fedora Netowrking group ??)
 sudo dnf --setopt=install_weak_deps=False install blueman
 
 ====== wallust ======
-sudp dnf install cargo
+sudo dnf install cargo
 cargo install wallust
 
 https://codeberg.org/explosion-mental/wallust/src/branch/master#installation
@@ -31,6 +31,7 @@ https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/instal
 
 sudo dnf install dotnet-sdk-8.0
 Also dotnet 7 runtime might be still required. If so should be installed manually
+https://koji.fedoraproject.org/koji/buildinfo?buildID=2452029
 
 dotnet tool install -g git-credential-manager
 git-credential-manager configure
