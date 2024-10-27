@@ -15,5 +15,5 @@ cmd = "cargo install"
 batching = true
 
 [flatpak]
-cmd = "flatpak install -y"
+cmd = "flatpak install -y flathub"
 batching = true

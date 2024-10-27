@@ -4,7 +4,8 @@ name = "apps"
 name = "flathub apps"
 tool = "flatpak"
 packages = [
-  "flathub io.missioncenter.MissionCenter",
-  "flathub org.kde.krita",
-  "flathub io.mpv.Mpv",
+  "io.missioncenter.MissionCenter",
+  "org.gnome.TextEditor",
+  "org.kde.krita",
+  "io.mpv.Mpv",
 ]
