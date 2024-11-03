@@ -18,8 +18,25 @@
     - Generate custom theme from wallpaper
     - thunar
 
-- configure SDDM
+- QT apps theming
+
+- configure SDDM [+,/]
+  add wallust themeing?
+
+
+- auto update on startup
+  - check and notify for dnf update
+  - auto update youtube player from rmp file
+
+- gnu stow
+
+- add clipboard manager?
 
 apps:
- text editor
- image viewer/editor?
+ text editor [+]
+ image viewer/editor [+]
+
+pde:
+  add set sddm background command
+  swaybg background mode controls
+  monitors controls (extranal only/ switch back on monitor disconect)

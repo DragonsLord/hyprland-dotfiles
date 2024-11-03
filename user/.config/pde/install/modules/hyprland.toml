@@ -23,6 +23,8 @@ packages = [
   "xdg-desktop-portal",
   "qt5ct",
   "qt6ct",
+  "qt6-qtsvg",
+  "qt6-qt5compat",
 ]
 
 [[steps]]
@@ -49,6 +51,14 @@ name = "init wallust theme"
 script = """
   pde theme set-wallpaper --no-reload ~/.config/wallust/init-wallpaper.png 
 """
+
+[[steps]]
+name = "sddm theme"
+# TODO: check permissions
+extract_zip_to = "/usr/share/sddm/themes"
+packaes = [
+  "https://gitlab.com/api/v4/projects/37107648/packages/generic/sddm-eucalyptus-drop/2.0.0/sddm-eucalyptus-drop-v2.0.0.zip",
+]
 
 [[steps]]
 name = "set arc theme"
