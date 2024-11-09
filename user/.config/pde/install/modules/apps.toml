@@ -4,6 +4,7 @@ name = "apps"
 name = "flathub apps"
 tool = "flatpak"
 packages = [
+  "com.saivert.pwvucontrol",
   "io.missioncenter.MissionCenter",
   "org.gnome.TextEditor",
   "org.kde.krita",
