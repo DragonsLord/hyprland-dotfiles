@@ -28,9 +28,12 @@
   - check and notify for dnf update
   - auto update youtube player from rmp file
 
-- gnu stow
+- gnu stow [+]
 
 - add clipboard manager?
+
+- audio device select
+- desktop mode switch
 
 apps:
  text editor [+]
