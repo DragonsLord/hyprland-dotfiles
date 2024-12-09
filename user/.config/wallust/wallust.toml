@@ -85,6 +85,7 @@ colors = { template = "colors.css", target = "~/.desk-env/theme/wallust/colors.c
 hyprcolors = { template = "hyprland-colors.conf", target = "~/.config/hypr/modules/gen/_colors.conf" }
 kitty = { template = "kitty.conf", target = "~/.config/kitty/themes/gen/_colors.conf" }
 nvim = { template = "nvim.lua.jinja", target = "~/.config/nvim/lua/gen/wallust.lua" }
+variables = { template = "variables.toml.jinja", target = "~/.desk-env/theme/variables.toml" }
 
 # REMINDER Variables and methods that can be used with templating:
 #  wallpaper:  The full path to the current wallpaper, colorscheme file or the name of the theme in use.
