@@ -30,7 +30,14 @@ packages = [
 [[steps]]
 name = "soft"
 tool = "install"
-packages = ["firefox", "thunar", "wdisplays", "gnome-keyring", "seahorse"]
+packages = [
+  "firefox",
+  "thunar",
+  "wdisplays",
+  "gnome-keyring",
+  "seahorse",
+  "grimshot",
+]
 
 [[steps]]
 name = "git credential manager"
