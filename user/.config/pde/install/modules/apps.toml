@@ -9,4 +9,5 @@ packages = [
   "org.gnome.TextEditor",
   "org.kde.krita",
   "io.mpv.Mpv",
+  "org.telegram.desktop",
 ]
