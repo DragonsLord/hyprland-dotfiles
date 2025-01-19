@@ -41,7 +41,7 @@
   },
   "wlr/taskbar": {
     "all-outputs": true,
-    "format": "{icon}",
+    "format": "{icon} {name}",
     "icon-size": 16,
     "tooltip": true,
     "tooltip-format": "[{name}] {title}",
