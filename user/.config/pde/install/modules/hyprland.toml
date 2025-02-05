@@ -32,7 +32,9 @@ name = "soft"
 tool = "install"
 packages = [
   "firefox",
+  "file-roller",
   "thunar",
+  "thunar-archive-plugin",
   "wdisplays",
   "gnome-keyring",
   "seahorse",
