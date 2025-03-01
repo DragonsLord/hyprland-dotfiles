@@ -13,7 +13,7 @@ packages = ["atim/starship", "atim/lazygit"]
 [[steps]]
 name = "packages"
 tool = "install"
-packages = ["neovim", "lazygit", "starship"]
+packages = ["neovim", "lazygit", "git-delta", "starship"]
 
 [[steps]]
 name = "add rpm fusion repos"
