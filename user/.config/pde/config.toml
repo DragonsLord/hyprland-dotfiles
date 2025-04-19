@@ -12,4 +12,4 @@ step = 5
 keyboard_device = "asus::kbd_backlight"
 
 [theme]
-on_init = ["asusctl led-mode static -c {{ mix_color }}"]
+on_init = ["asusctl aura static -c {{ mix_color }}"]
