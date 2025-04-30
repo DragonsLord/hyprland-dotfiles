@@ -71,4 +71,3 @@ gsettings set org.gnome.desktop.interface icon-theme Arc-Dark
 wdisplays
 https://wiki.hyprland.org/Nvidia/#multi-monitor-with-hybrid-graphics
 
-

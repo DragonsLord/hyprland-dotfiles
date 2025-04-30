@@ -180,6 +180,14 @@ scale slider {
     color: @fg;
 }
 
+.notification .notification-content .summary {
+    color: @text;
+}
+
+.notification .notification-content .body {
+    color: @text-muted;
+}
+
 .notification-row button.close-button {
     border: 1px solid transparent;
     background: transparent;
