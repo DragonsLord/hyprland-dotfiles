@@ -17,6 +17,7 @@ packages = [
   "xfce-polkit",
   "wlogout",
   "waybar",
+  "rofi",
   "network-manager-applet",
   "blueman",
   "kitty",

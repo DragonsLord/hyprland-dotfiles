@@ -26,6 +26,8 @@ unset rc
 
 . "$HOME/.cargo/env"
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # export GPG_TTY=$(tty)
 
 eval "$(starship init bash)"

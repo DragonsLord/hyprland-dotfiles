@@ -82,6 +82,7 @@ palette = "dark"
 dir = { template = "icons", target = "~/.desk-env/theme/wallust/icons" }
 
 colors = { template = "colors.css", target = "~/.desk-env/theme/wallust/colors.css" }
+colors_rofi = { template = "colors.rasi", target = "~/.desk-env/theme/wallust/colors.rasi" }
 hyprcolors = { template = "hyprland-colors.conf", target = "~/.config/hypr/modules/gen/_colors.conf" }
 kitty = { template = "kitty.conf", target = "~/.config/kitty/themes/gen/_colors.conf" }
 nvim = { template = "nvim.lua.jinja", target = "~/.config/nvim/lua/gen/wallust.lua" }

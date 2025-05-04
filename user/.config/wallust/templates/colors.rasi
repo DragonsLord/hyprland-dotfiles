@@ -1,0 +1,12 @@
+{% set color = color2 | blend(color3) | blend(color4) | blend(color5) | blend(color6) %}
+{% set text_color = color | blend(foreground) %}
+
+* {
+    foreground:           {{foreground}}{{100 | alpha_hexa}};
+    background:           {{background}}{{80 | alpha_hexa}};
+    background-highlight: {{background | lighten(0.1)}}{{20 | alpha_hexa}};
+
+    border:               {{color}}{{100 | alpha_hexa}};
+    text:                 {{text_color | blend(foreground)}}{{100 | alpha_hexa}};
+    text-muted:           {{text_color | blend(background)}}{{100 | alpha_hexa}}; 
+}
