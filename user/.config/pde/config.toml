@@ -13,3 +13,7 @@ keyboard_device = "asus::kbd_backlight"
 
 [theme]
 on_init = ["asusctl aura static -c {{ mix_color }}"]
+
+[theme.selector]
+wallpapers_dirs = ["~/Wallpapers", "~/Wallpapers/art"]
+config_path = "~/.config/rofi/preview.config.rasi"

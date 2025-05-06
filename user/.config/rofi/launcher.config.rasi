@@ -9,10 +9,10 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun";
-    show-icons:                 true;
-    display-drun:               " ";
-	drun-display-format:        "{name}";
+	modi:                 "drun";
+  show-icons:           true;
+  display-drun:         " ";
+	drun-display-format:  "{name}";
 }
 
 * {

@@ -1,0 +1,122 @@
+/**
+ * Based On: 
+ *
+ * Fullscreen theme with switchable PREVIEW option.
+ * 
+ * User: Dave Davenport
+ * Copyright: Dave Davenport
+ * Link: https://github.com/davatorium/rofi/blob/b35f516556120d82d678cc7b048b9e971d778734/themes/fullscreen-preview.rasi
+ */
+
+configuration {
+  show-icons:       true;
+}
+
+@import "~/.desk-env/theme/wallust/colors.rasi"
+
+* {
+    font: "HackNerdFont 13";
+	  background-color: transparent;
+    text-color: @text;
+}
+
+
+window {
+	fullscreen:       true;
+	background-color: @background; //black/80%;
+	padding:          4em;
+  orientation:      horizontal;
+  children:         [icon-current-entry, selection-root];
+  spacing:          0.4em;
+  border:           0;
+}
+
+icon-current-entry {
+  expand: true;
+  size:   100%;
+  margin: 0.2em;
+}
+
+selection-root {
+  orientation: vertical;
+  spacing:  1em;
+  children: [inputbar, listview];
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     15px;
+    border:                      0px solid;
+    border-radius:               12px;
+    border-color:                @border;
+    background-color:            @background-highlight;
+    text-color:                  @text;
+    children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+   enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    spacing:                     0;
+
+}
+
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           @text-muted;
+}
+
+listview {
+  border: 0;
+	flow: horizontal;
+	fixed-columns: true;
+	spacing: 1.0em;
+  columns: 4;
+}
+
+element {
+	orientation:        vertical;
+
+  border:             0;
+  border-radius:      0.4em;
+  background-color:   transparent;
+  text-color:         text;
+  cursor:             pointer;
+  padding:            0.1em;
+
+  children: [element-icon, element-text];
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color:   transparent;
+    text-color:         @text;
+}
+
+element selected.normal {
+  background-color: @background-highlight;
+  text-color:       @foreground;
+	border-color:     @border;
+	border:           2px;
+	border-radius:    0.4em;
+}
+
+element-icon {
+	size: calc(100% / 8);
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
+}
+
+element-text {
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
+  padding: 0.2em;
+}
+

@@ -1,1 +1,5 @@
+configuration {
+  modes: [drun, dmenu];
+}
+
 @import "launcher.config.rasi"
