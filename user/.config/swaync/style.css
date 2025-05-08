@@ -9,23 +9,22 @@
 .control-center {
     background: alpha(@bg, 0.9);
     border: 1px solid @border;
-    color: @text-muted;
+    color: @text;
     border-radius: 6px;
     margin: 3px 0px;
 }
 
 .widget-label label {
     font-size: 18px;
-    color: @text-muted;
+    color: @text;
     padding: 0px 130px;
 }
 
 .widget-dnd {
-    background: alpha(@bg-alt, 0.2);
     padding: 1px 10px;
     margin: 0px 10px;
     border-radius: 5px;
-    color: @fg;
+    color: @text;
 }
 
 .widget-dnd switch {
@@ -150,7 +149,7 @@ scale slider {
 }
 
 .widget-title label {
-    color: @text-muted;
+    color: @text;
     font-weight: bold;
     margin: 0px 5px;
 }

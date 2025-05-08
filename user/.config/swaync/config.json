@@ -5,6 +5,7 @@
   "layer": "overlay",
   "layer-shell": true,
   "cssPriority": "application",
+  "control-center-positionX": "right",
   "control-center-layer": "top",
   "control-center-margin-top": 0,
   "control-center-margin-bottom": 0,
@@ -32,7 +33,7 @@
   "hide-on-clear": false,
   "hide-on-action": true,
   "script-fail-notify": true,
-  "widgets": ["label", "dnd", "mpris", "volume", "backlight", "title", "notifications"],
+  "widgets": ["label", "mpris", "volume", "backlight", "title", "notifications", "dnd"],
   "widget-config": {
     "title": {
       "text": "Notifications",

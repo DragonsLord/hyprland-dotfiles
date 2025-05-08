@@ -17,7 +17,7 @@ button {
   color: @text-muted;
   font-size: 22px;
   text-shadow: -1px 0 @bg, 0 1px @bg, 1px 0 @bg, 0 -1px @bg; /* text outline */
-	background-color: @bg;
+	background-color: alpha(@bg, 0.7);
 	border-style: solid;
 	border-width: 3px;
 	background-repeat: no-repeat;
@@ -34,7 +34,7 @@ button:focus, button:active {
 button:hover {
   color: @text;
   border-color: @border;
-	background-color: alpha(@bg-alt, 0.9);
+	background-color: alpha(@bg-alt, 0.6);
 	outline-style: none;
 }
 
