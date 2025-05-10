@@ -39,7 +39,18 @@ apps:
  text editor [+]
  image viewer/editor [+]
 
+GPU switch:
+  - add pde support
+  - waybar indicator with switch on click
+
 pde:
   add set sddm background command
   swaybg background mode controls
-  monitors controls (extranal only/ switch back on monitor disconect)
+  monitors controls (external only/ switch back on monitor disconect)
+
+  install/update latest rmp from github
+
+- include asus kernel to installation:
+  https://copr.fedorainfracloud.org/coprs/lukenukem/asus-kernel/
+
+- thorimum theme configuration (through GTK?)
