@@ -1,0 +1,7 @@
+https://crates.io/crates/hyprland
+
+list all monitors:
+hyprctl monitors all -j
+
+disable monitor
+hyprctl keyword monitor "$INTERNAL_MONITOR, disable"
