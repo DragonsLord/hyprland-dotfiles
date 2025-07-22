@@ -12,16 +12,16 @@ packages = [
   "sddm",
   "hyprland",
   "hyprlock",
-  "SwayNotificationCenter",
+  "SwayNotificationCenter", //swaync
   "swaybg",
-  "xfce-polkit",
+  "xfce-polkit", //hyprpolkitagent
   "wlogout",
   "waybar",
   "rofi",
   "network-manager-applet",
   "blueman",
   "kitty",
-  "xdg-desktop-portal",
+  "xdg-desktop-portal", //xdg-desktop-portal-hyprland
   "qt5ct",
   "qt6ct",
   "qt6-qtsvg",
