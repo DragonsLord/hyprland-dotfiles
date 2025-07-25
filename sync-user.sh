@@ -1,1 +1,1 @@
-stow -R user
+stow -R --no-folding user
